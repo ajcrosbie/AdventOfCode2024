@@ -1,4 +1,4 @@
-package day0.java;
+package day0;
 
 public class question2 {
     public static void main(String[] args) {

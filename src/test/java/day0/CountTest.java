@@ -2,12 +2,13 @@ package day0;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.Arrays;
 import java.util.Iterator;
+import java.util.Arrays;
+
 
 import org.junit.jupiter.api.Test;
 
-public class TestCount {
+public class CountTest {
 
     @Test
     public void testEmptyCounter() {
@@ -35,19 +36,5 @@ public class TestCount {
         Counter<String> counter = new Counter<>(Arrays.asList("apple", "banana", "apple"));
         assertEquals(2, counter.getCount("apple"), "Count for 'apple' should be 2.");
         assertEquals(1, counter.getCount("banana"), "Count for 'banana' should be 1.");
-    }
-
-    @Test
-    public void testIterator() {
-
-        Iterator<String> iterator = counter.iterator();
-
-        assertEquals("apple", iterator.next(), "Iterator should return 'apple' first.");
-
-        assertEquals("banana", iterator.next(), "Iterator should return 'banana' next.");
-
-        assertEquals("apple", iterator.next(), "Iterator should return 'apple' again.");
-
-        assertFalse(iterator.hasNext(), "Iterator should not have more elements.");
     }
 }

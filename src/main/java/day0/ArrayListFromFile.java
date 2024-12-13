@@ -1,4 +1,4 @@
-package day0.java;
+package day0;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -40,18 +40,18 @@ public class ArrayListFromFile<T> implements Iterable<T> {
         return array.iterator();
     }
 
-    public boolean allRead() {
+    public boolean notDone() {
         return myReader.hasNextLine();
     }
 
     public void readAll() {
-        while (allRead()) {
+        while (notDone()) {
             readData();
         }
     }
 
     private void readData() {
-        if (allRead()) {
+        if (notDone()) {
             array.add(generator.extract((myReader.nextLine())));
         }
     }

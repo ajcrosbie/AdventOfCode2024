@@ -1,4 +1,4 @@
-package day0.java;
+package day0;
 
 import java.util.HashMap;
 import java.util.Iterator;
