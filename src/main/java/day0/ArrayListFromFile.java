@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class ArrayListFromFile<T> implements Iterable<T> {
@@ -39,7 +40,10 @@ public class ArrayListFromFile<T> implements Iterable<T> {
         readAll();
         return array.iterator();
     }
-
+    
+    public void sort(Comparator<? super T>cmp){
+        array.sort(cmp);
+    }
     public boolean notDone() {
         return myReader.hasNextLine();
     }
@@ -49,7 +53,10 @@ public class ArrayListFromFile<T> implements Iterable<T> {
             readData();
         }
     }
-
+    public ArrayList<T> toArrayList(){
+        readAll();
+        return array;
+    }
     private void readData() {
         if (notDone()) {
             array.add(generator.extract((myReader.nextLine())));
