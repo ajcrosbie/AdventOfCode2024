@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.ArrayList;
 
 
-public class question1{
+public class D0question1{
     public static void main(String[] args){
         ArrayList<Integer> alist = new ArrayListFromFile<Integer>("src/main/java/day0/numsList.txt",
         (String s) -> Integer.parseInt(s.split("   ")[0])).toArrayList();
