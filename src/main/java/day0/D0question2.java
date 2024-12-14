@@ -1,6 +1,6 @@
 package day0;
 
-public class question2 {
+public class D0question2 {
     public static void main(String[] args) {
 
         ArrayListFromFile<Integer> alist = new ArrayListFromFile<Integer>("day0/numsList.txt",

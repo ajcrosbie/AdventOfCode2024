@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import day0.ArrayListFromFile;
 
-public class question2 {
+public class D1question2 {
     public static void main(String[] args){
         ArrayList<int[]> a = new ArrayListFromFile<int[]>("src/main/java/day1/numbers.txt", (String s) 
         -> Arrays.stream(s.split(" ")).mapToInt(Integer::parseInt).toArray()).toArrayList();
@@ -24,7 +24,7 @@ public class question2 {
         System.out.println(sm);
     }
 
-    private static int[] removeIndex(int[] arr, int index){
+    public static int[] removeIndex(int[] arr, int index){
         int[] a = new int[arr.length-1];
         int count=0;
         for (int i=0;i<arr.length;i++){
@@ -37,7 +37,7 @@ public class question2 {
 
     }
 
-    private static int checkWithout(int[] arr, int ignore){
+    public static int checkWithout(int[] arr, int ignore){
         int i[];
         if (ignore ==-1){i = arr;}
         else{i = removeIndex(arr, ignore);}
